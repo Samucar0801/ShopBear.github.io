@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🧸 ShopBear: Seu Amigo de Pelúcia! 🐻</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #ffd3e0, #ffffff);
+        font-family: "Comic Sans MS", cursive;
+      }
+      .bear-box {
+        transition: all 0.4s ease-in-out;
+      }
+      .bear-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .bear-box-1:hover {
+        background: linear-gradient(135deg, #ffb6c1, #ffffff) !important;
+      }
+      .bear-box-2:hover {
+        background: linear-gradient(135deg, #87cefa, #ffffff) !important;
+      }
+      .bear-box-3:hover {
+        background: linear-gradient(135deg, #dda0dd, #ffffff) !important;
+      }
+    </style>
+  </head>
+  <body class="text-center">
+    <header class="bg-pink-400 p-6 shadow-lg">
+      <h1 class="text-5xl text-white font-bold">🧸 ShopBear 🐻</h1>
+      <p class="text-2xl text-white">Seu próximo melhor amigo está aqui!</p>
+    </header>
+
+    <main class="container mx-auto mt-10">
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+        <!-- Urso 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-2xl bear-box bear-box-1">
+          <img
+            src="/imgs/FELIZ.jpeg"
+            alt="Urso Feliz"
+            class="mx-auto mb-4 rounded-full"
+          />
+          <h2 class="text-3xl font-bold text-pink-600">Ursinho Feliz</h2>
+          <p class="text-xl text-gray-700">Sempre pronto para um abraço!</p>
+          <div class="mt-4">
+            <span class="text-2xl font-bold text-green-600">R$ 59,90</span>
+            <button
+              class="mt-3 bg-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-500"
+            >
+              Comprar Agora!
+            </button>
+          </div>
+        </div>
+
+        <!-- Urso 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-2xl bear-box bear-box-2">
+          <img
+            src="/imgs/AVENTUREIRO.jpeg"
+            alt="Urso Aventureiro"
+            class="mx-auto mb-4 rounded-full"
+          />
+          <h2 class="text-3xl font-bold text-blue-600">Urso Aventureiro</h2>
+          <p class="text-xl text-gray-700">Pronto para novas explorações!</p>
+          <div class="mt-4">
+            <span class="text-2xl font-bold text-green-600">R$ 69,90</span>
+            <button
+              class="mt-3 bg-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-500"
+            >
+              Comprar Agora!
+            </button>
+          </div>
+        </div>
+
+        <!-- Urso 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-2xl bear-box bear-box-3">
+          <img
+            src="/imgs/SONECA.jpeg"
+            alt="Urso Soneca"
+            class="mx-auto mb-4 rounded-full"
+          />
+          <h2 class="text-3xl font-bold text-purple-600">Urso Soneca</h2>
+          <p class="text-xl text-gray-700">O melhor companheiro para dormir!</p>
+          <div class="mt-4">
+            <span class="text-2xl font-bold text-green-600">R$ 54,90</span>
+            <button
+              class="mt-3 bg-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-500"
+            >
+              Comprar Agora!
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-yellow-200 p-8 mt-10 rounded-2xl">
+        <h2 class="text-4xl font-bold text-pink-700">
+          🎉 Promoção Especial! 🎉
+        </h2>
+        <p class="text-2xl text-blue-800">
+          Compre 2 ursinhos e ganhe um adesivo personalizado!
+          <br />
+          Descubra os nossos amiguinhos de pelúcia mais fofinhos do mundo! 🌟✨
+          Eles são tão adoráveis que nossos clientes nunca saem sem um. Além de
+          fofos, eles são perfeitos para usar como travesseiro, proporcionando
+          um conforto incrível. Esqueça os travesseiros comuns, porque com esses
+          amiguinhos peludos, dormir será uma experiência mágica e aconchegante.
+          Venha e leve a doçura e o carinho de um bichinho de pelúcia para casa
+          hoje mesmo! 🧸❤️
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-pink-400 text-white p-6 mt-10">
+      <p>© 2024 Ursos Fofinhos - Todos os direitos reservados</p>
+      <p>Contato: (11) 1234-5678 | ursos@fofinhos.com.br</p>
+    </footer>
+  </body>
+</html>

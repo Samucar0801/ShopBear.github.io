@@ -1,0 +1,196 @@
+/* Paleta de cores */
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #FFD93D;
+    --accent-color: #9B59B6;
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Animação do logo */
+  @keyframes logo-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    animation: logo-bounce 2s infinite;
+  }
+  
+  /* Animação de navegação */
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Efeito de hover nos cartões de produto */
+  .product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Animação de entrada dos produtos */
+  .product-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efeito de pulsar no botão de compra */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .buy-button {
+    display: block;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    animation: pulse 2s infinite;
+  }
+  
+  .buy-button:hover {
+    background-color: #FFB800;
+    animation-play-state: paused;
+  }
+  
+  /* Estilos do carrinho de compras */
+  #cart {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 100;
+    animation: slide-in 0.3s ease-in-out;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    animation: fade-in 0.3s ease-in-out;
+  }
+  
+  .cart-item .product-image {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+  }
+  
+  .cart-item .product-name {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .cart-item .product-price {
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+  
+  .cart-item .product-quantity {
+    margin: 0 0.5rem;
+  }
+  
+  .cart-item .remove-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cart-item .remove-button:hover {
+    background-color: #E53935;
+  }
+  
+  .hidden {
+    display: none;
+  }
